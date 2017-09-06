@@ -34,4 +34,28 @@ describe('Calc', () => {
       expect(calc.div).to.be.a.function;
     });
   });
+
+  describe('Sum',function(){
+    it('should return 4 when `sum(2,2)`', function(){
+      expect(calc.sum(2,2)).to.be.equal(4);
+    });
+
+    it('should return -4 when `sub(6,10)`', function(){
+      expect(calc.sub(6,10)).to.be.equal(-4);
+    });
+
+    it('should return 4 when `mult(2,2)`', function(){
+      expect(calc.mult(2,2)).to.be.equal(4);
+    });
+
+    it('should return 4 when `div(8,4)`', function(){
+      expect(calc.div(8,2)).to.be.equal(4);
+    });
+
+     it('should return `não é possível divisao por 0!` when division by 0', function(){
+      expect(calc.div(4,0)).to.be.equal('Não é possível divisao por 0!');
+    });
+
+  });
+
 });
